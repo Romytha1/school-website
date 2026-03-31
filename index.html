@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maarif Al-Ilm</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- الهيدر -->
+<header class="top-header">
+    <div class="logo-right">
+        <img src="images/logo.jpeg" alt="Logo">
+    </div>
+
+    <div class="apply-btn">
+        <a href="#apply-section" class="apply-now">Apply Now</a>
+    </div>
+</header>
+
+<!-- القائمة الرئيسية -->
+<nav class="main-menu">
+    <ul>
+
+        <!-- Maarif Al-Ilm -->
+        <li class="dropdown">
+           <a href="#maarif-section" class="dropbtn">
+    Maarif Al-Ilm <i class="fas fa-chevron-down"></i>
+</a>
+
+            <div class="dropdown-content">
+                <p>
+                    Our International Private School offers high-quality British education for Kindergarten and Primary students in a safe and inspiring environment. We focus on developing academic excellence, confidence, and creativity through engaging and modern teaching methods, preparing our students for a successful global future.
+                </p>
+            </div>
+        </li>
+
+        <!-- Learning -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn">
+                Learning <i class="fas fa-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-content">
+
+                <div class="sub-dropdown">
+                    <a href="#" class="sub-dropbtn">Kindergarten (KG1 – KG3)</a>
+                    <div class="sub-dropdown-content">
+                        <p>
+                            Our Kindergarten welcomes children from KG1 to KG3, providing a nurturing and playful environment where learning is fun.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub-dropdown">
+                    <a href="#" class="sub-dropbtn">Primary School (Grades 1 – 6)</a>
+                    <div class="sub-dropdown-content">
+                        <p>
+                            Our Primary School follows the British curriculum focusing on academic excellence and creativity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+
+        <!-- Admissions -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn">
+                Admissions <i class="fas fa-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-content">
+                <h3>Apply to Maarif Al-Ilm</h3>
+                <p>
+                    Dar Jana’s Admissions Office provides support through every step of the application process.
+                </p>
+            </div>
+        </li>
+
+        <!-- Parents -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn">
+                Parents <i class="fas fa-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-content">
+                <p>
+                    Welcome to the Parents Portal — your gateway to updates, your child’s progress, and communication with the school.
+                </p>
+            </div>
+        </li>
+
+        <!-- Careers -->
+        <li>
+            <a href="#" class="careers-link">Careers</a>
+        </li>
+
+    </ul>
+</nav>
+
+<!-- الهيرو -->
+<section class="hero-section">
+    <img src="images/students.jpg" alt="Student">
+</section>
+
+<!-- About Section -->
+<section id="maarif-section" class="apply-section">
+    <div class="apply-text">
+        <p>
+            Our International Private School offers high-quality British education for Kindergarten and Primary students in a safe and inspiring environment. We focus on developing academic excellence, confidence, and creativity through engaging and modern teaching methods, preparing our students for a successful global future.
+        </p>
+    </div>
+</section>
+
+<!-- Apply Section -->
+<!-- قسم Apply Section -->
+<section id="apply-section" class="apply-section">
+    <div class="apply-container">
+        <h1 class="apply-title">Apply to Maarif Al-Ilm International Schools</h1>
+        <p class="apply-paragraph">
+            We, at Dar Jana, have joined all our efforts to make a difference in the quality of learning and teaching. We believe in accepting each child’s individuality and helping our students progress at their own pace to achieve maximum academic progress and social development.
+        </p>
+        <a href="#contact-section" class="apply-btn-main">Apply Now</a>
+    </div>
+</section>
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    // main dropdown
+    document.querySelectorAll('.dropdown').forEach(drop => {
+        const btn = drop.querySelector('.dropbtn');
+
+        if (!btn) return;
+
+        btn.addEventListener('click', function(e) {
+            if (!btn.getAttribute('href').startsWith('#')) return;
+
+            document.querySelectorAll('.dropdown').forEach(drop => {
+    const btn = drop.querySelector('.dropbtn');
+
+    if (!btn) return;
+
+    btn.addEventListener('click', function(e) {
+
+        // إذا هذا الزر مربوط بنقطة داخل الصفحة (#)
+        if (btn.getAttribute('href') && btn.getAttribute('href').startsWith('#')) {
+            return; // خليه يروح للقسم طبيعي
+        }
+
+        e.preventDefault();
+        drop.classList.toggle('active');
+    });
+});
+        });
+    });
+
+    // sub dropdown
+    document.querySelectorAll('.sub-dropbtn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const content = this.nextElementSibling;
+            if (!content) return;
+
+            content.style.display =
+                content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', function(e) {
+        document.querySelectorAll('.dropdown').forEach(drop => {
+            if (!drop.contains(e.target)) {
+                drop.classList.remove('active');
+            }
+        });
+    });
+
+});
+</script>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-left">
+        <img src="images/logo.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-right">
+        <span class="footer-email">info@maarif-elm.edu.sa</span>
+        
+        <!-- الأيقونات -->
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- الدفع -->
+        <div class="footer-payments">
+            <img src="images/visa.svg" alt="Visa" class="pay-icon">
+            <img src="images/pay.png" alt="PayPal" class="pay-icon">
+            <img src="images/mada.png" alt="MasterCard" class="pay-icon">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

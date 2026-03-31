@@ -1,0 +1,278 @@
+/* ------------- Reset أساسي ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+}
+
+/* ------------- الهيدر ------------- */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-right img {
+    height: 60px;
+}
+
+.apply-btn .apply-now {
+    background-color: hsl(206, 100%, 48%);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.apply-btn .apply-now:hover {
+    background-color: #d89e00;
+}
+
+/* ------------- القائمة الرئيسية ------------- */
+.main-menu {
+    background-color: #599f20;
+    width: 100%;
+    border-bottom: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul li {
+    position: relative;
+    padding: 15px 25px;
+}
+
+.main-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ------------- HERO ------------- */
+.hero-section {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.middle-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------- Apply Section ------------- */
+.apply-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.apply-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ------------- DROPDOWN (Hover فقط) ------------- */
+.dropdown {
+    position: relative;
+}
+
+/* الصندوق */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    min-width: 320px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 2000;
+}
+
+/* الفتح عند المرور */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* النص داخل القائمة */
+.dropdown-content a,
+.dropdown-content p {
+    color: #333;
+}
+
+/* ------------- SUB DROPDOWN ------------- */
+.sub-dropdown-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* نفتحها بالهوفر بعد */
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+/* زر الأقسام الفرعية */
+.sub-dropbtn {
+    display: block;
+    background: #599f20;
+    color: #fff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sub-dropbtn:hover {
+    background: #4a851b;
+    transform: translateY(-2px);
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* خلفية داكنة */
+    color: #fff; /* نص أبيض */
+    padding: 20px;
+    flex-wrap: wrap; /* عشان الشاشة الصغيرة تتحرك */
+}
+
+.footer-left img.footer-logo {
+    height: 50px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* مسافة بين العناصر */
+    flex-wrap: wrap;
+}
+
+/* البريد */
+.footer-email {
+    font-size: 14px;
+}
+
+/* أيقونات السوشيال */
+.footer-social {
+    display: flex;
+    gap: 15px; /* مسافة بين كل أيقونة */
+}
+
+.footer-social a {
+    color: #fff; /* أبيض */
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #1da1f2; /* تغير اللون عند المرور */
+}
+
+/* أيقونات الدفع */
+.footer-payments {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-payments img.pay-icon {
+    height: 30px;
+}
+/* Apply Section */
+.apply-section {
+    background-color: #f0f4f8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.apply-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.apply-title {
+    font-size: 36px; /* خط كبير */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.apply-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.apply-btn-main {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.apply-btn-main:hover {
+    background-color: #005bb5;
+}
+/* تطبيق الخطوط على كامل الموقع */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* العناوين */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+/* نصوص الباراجراف داخل Apply Section */
+.apply-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center; /* يوضح الباراجراف في الوسط */
+}
+
