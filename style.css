@@ -275,4 +275,32 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
     text-align: center; /* يوضح الباراجراف في الوسط */
 }
+/* موبايل */
+@media (max-width: 768px) {
 
+    .main-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apply-container-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+    }
+
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+
+}
